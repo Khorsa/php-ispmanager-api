@@ -1,0 +1,10 @@
+/docker
+/.idea
+/run.bat
+/cs.cmd
+/sa.cmd
+/vendor/
+/.phpunit.result.cache
+/.s2.access
+/.php-cs-fixer.cache
+/var

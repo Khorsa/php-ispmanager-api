@@ -1,0 +1,12 @@
+parameters:
+  tmpDir:
+      '%rootDir%/../../../var/cache/stan'
+
+  reportUnmatchedIgnoredErrors: false
+  inferPrivatePropertyTypeFromConstructor: true
+  checkGenericClassInNonGenericObjectType: false
+  checkMissingIterableValueType: false
+  treatPhpDocTypesAsCertain: false
+
+  parallel:
+      processTimeout: 600.00
