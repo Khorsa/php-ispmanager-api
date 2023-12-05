@@ -59,6 +59,19 @@ class IspUser extends IspFunctionsAbstract
     }
 
     /**
+     * Delete user with $userName.
+     *
+     * @throws IspException
+     */
+    public function delete(string $userName): void
+    {
+        $result = $this->executeByParameters('user.delete', ['elid' => $userName]);
+        if (!isset($result['doc']['ok'])) {
+            throw new IspException('ISP User delete error, '.$userName);
+        }
+    }
+
+    /**
      * @throws IspException
      */
     public function getRedirectLink(string $user): string

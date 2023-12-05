@@ -22,6 +22,6 @@ class IspAccessData
             $server .= ':'.$this->port;
         }
 
-        return "{$this->protocol}://$server/" . self::ISP_PATH;
+        return "{$this->protocol}://$server/".self::ISP_PATH;
     }
 }

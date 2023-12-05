@@ -4,10 +4,16 @@ namespace IspManagerApi;
 
 abstract class IspFunctionsAbstract
 {
+    private ?IspAccessData $ispAccessData = null;
+
     public function __construct(
-        private readonly IspAccessData $ispAccessData,
         private readonly IspConnection $ispConnection,
     ) {
+    }
+
+    public function setAccessData(IspAccessData $ispAccessData): void
+    {
+        $this->ispAccessData = $ispAccessData;
     }
 
     /**
@@ -36,7 +42,7 @@ abstract class IspFunctionsAbstract
                     $message = str_replace('__'.$param['$name'].'__', $param['$'], $message);
                 }
             } catch (\Exception $exception) {
-                throw new IspException('Parse error: '.trim($response));
+                throw new IspException('Parse error: ('.$exception->getMessage().')'.trim($response));
             }
             throw new IspException("Execution {$function} error: ".trim($message));
         }
@@ -46,6 +52,9 @@ abstract class IspFunctionsAbstract
 
     protected function formLink(string $command, array $parameters): string
     {
+        if (null === $this->ispAccessData) {
+            throw new IspException('Need to set AccessData');
+        }
         $link = $this->ispAccessData->getSiteUrl()."?out=sjson&authinfo={$this->ispAccessData->login}:{$this->ispAccessData->password}";
         $link .= '&func='.$command;
         foreach ($parameters as $key => $value) {
@@ -57,6 +66,10 @@ abstract class IspFunctionsAbstract
 
     protected function getKeyLoginLink(string $user, string $key): string
     {
-        return $this->ispAccessData->getSiteUrl()."?func=auth&username={$user}&key={$key}&checkcookie=no";
+        if (null === $this->ispAccessData) {
+            throw new IspException('Need to set AccessData');
+        }
+
+        return $this->ispAccessData->getSiteUrl()."?func=auth&username=$user&key=$key&checkcookie=no";
     }
 }
