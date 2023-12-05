@@ -1,6 +1,6 @@
 <?php
 
-namespace IspManagerApi\IspUser;
+namespace Khorsa\IspManagerApi\IspUser;
 
 class IspUserDto
 {

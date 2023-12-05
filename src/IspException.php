@@ -1,11 +1,11 @@
 <?php
 
-namespace IspManagerApi;
+namespace Khorsa\IspManagerApi;
 
 class IspException extends \Exception
 {
     public function __construct(string $ispMessage)
     {
-        parent::__construct($ispMessage, 0, null);
+        parent::__construct($ispMessage);
     }
 }

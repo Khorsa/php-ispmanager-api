@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Tests;
+namespace Khorsa\IspManagerApi\Tests;
 
-use IspManagerApi\IspException;
-use IspManagerApi\IspUser\IspUser;
+use Khorsa\IspManagerApi\IspException;
+use Khorsa\IspManagerApi\IspUser\IspUser;
 
 class IspUserTest extends IspAbstractTest
 {

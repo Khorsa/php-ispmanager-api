@@ -1,6 +1,6 @@
 <?php
 
-namespace IspManagerApi\IspWebDomain;
+namespace Khorsa\IspManagerApi\IspWebDomain;
 
 class IspWebDomainDto
 {

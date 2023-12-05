@@ -1,9 +1,9 @@
 <?php
 
-namespace IspManagerApi\IspWebDomain;
+namespace Khorsa\IspManagerApi\IspWebDomain;
 
-use IspManagerApi\IspException;
-use IspManagerApi\IspFunctionsAbstract;
+use Khorsa\IspManagerApi\IspException;
+use Khorsa\IspManagerApi\IspFunctionsAbstract;
 
 class IspWebDomain extends IspFunctionsAbstract
 {

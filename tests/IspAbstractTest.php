@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Tests;
+namespace Khorsa\IspManagerApi\Tests;
 
-use IspManagerApi\IspAccessData;
-use IspManagerApi\IspConnection;
+use Khorsa\IspManagerApi\IspAccessData;
+use Khorsa\IspManagerApi\IspConnection;
 use PHPUnit\Framework\TestCase;
 
 abstract class IspAbstractTest extends TestCase

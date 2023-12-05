@@ -1,9 +1,9 @@
 <?php
 
-namespace IspManagerApi\IspUser;
+namespace Khorsa\IspManagerApi\IspUser;
 
-use IspManagerApi\IspException;
-use IspManagerApi\IspFunctionsAbstract;
+use Khorsa\IspManagerApi\IspException;
+use Khorsa\IspManagerApi\IspFunctionsAbstract;
 
 class IspUser extends IspFunctionsAbstract
 {

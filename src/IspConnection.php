@@ -1,6 +1,6 @@
 <?php
 
-namespace IspManagerApi;
+namespace Khorsa\IspManagerApi;
 
 class IspConnection
 {

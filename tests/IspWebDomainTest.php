@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Tests;
+namespace Khorsa\IspManagerApi\Tests;
 
-use IspManagerApi\IspWebDomain\IspWebDomain;
-use IspManagerApi\IspWebDomain\IspWebDomainDto;
+use Khorsa\IspManagerApi\IspWebDomain\IspWebDomain;
+use Khorsa\IspManagerApi\IspWebDomain\IspWebDomainDto;
 
 class IspWebDomainTest extends IspAbstractTest
 {

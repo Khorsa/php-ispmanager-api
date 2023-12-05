@@ -1,6 +1,6 @@
 <?php
 
-namespace IspManagerApi;
+namespace Khorsa\IspManagerApi;
 
 abstract class IspFunctionsAbstract
 {
@@ -44,7 +44,7 @@ abstract class IspFunctionsAbstract
             } catch (\Exception $exception) {
                 throw new IspException('Parse error: ('.$exception->getMessage().')'.trim($response));
             }
-            throw new IspException("Execution {$function} error: ".trim($message));
+            throw new IspException("Execution $function error: ".trim($message));
         }
 
         return $decoded;
