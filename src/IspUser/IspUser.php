@@ -78,7 +78,7 @@ class IspUser extends IspFunctionsAbstract
     {
         $key = md5(uniqid('', true));
 
-        $result = $this->executeByParameters('session.newkey', ['key' => $key]);
+        $result = $this->executeByParameters('session.newkey', ['key' => $key, 'username' => $user]);
 
         if (!isset($result['doc']['ok'])) {
             throw new IspException('ISP RedirectLink error '.$user);
